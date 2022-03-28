@@ -1,5 +1,5 @@
-FROM php:5.6-apache
-RUN docker-php-ext-install mysql mysqli
+FROM php:7.0-apache
+RUN docker-php-ext-install mysqli
 RUN apt-get update -y && apt-get install -y sendmail libpng-dev
 RUN apt-get update && \
     apt-get install -y \
