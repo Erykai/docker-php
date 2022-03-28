@@ -1,6 +1,11 @@
 FROM php:5.6-apache
-RUN docker-php-ext-install gd intl pdo_mysql pdo_pgsql mysqli zip
-RUN pecl install xdebug && docker-php-ext-enable xdebug
+RUN apt-get update && apt-get install -y \
+        libfreetype6-dev \
+        libjpeg62-turbo-dev \
+        libpng-dev \
+    && docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-install -j$(nproc) gd pdo_mysql mysqli
+#RUN pecl install xdebug && docker-php-ext-enable xdebug
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN apt-get clean; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
 RUN chown -R root:www-data /var/www/html
