@@ -10,7 +10,7 @@ All xdebug, sendmail, libpng-dev, libzip-dev, zlib1g-dev, mysqli, pdo and gd
 ##Composer:
 
 ```bash
-"alexdeovidal/docker-dev": "v1.1.0"
+"alexdeovidal/docker-dev": "v1.1.0" 
 ```
 
 ##Terminal
