@@ -20,6 +20,10 @@ services:
   mysql:
     image: mariadb:10.8.2
     container_name: "srv-mariadb"
+    volumes:
+      - ../../../src/mariaDB/data:/var/lib/mysql
+      - ../../../src/mariaDB/logs:/var/log/mysql
+      - ../../../src/mariaDB/conf:/etc/mysql
     ports:
       - 3306:3306
     environment:
