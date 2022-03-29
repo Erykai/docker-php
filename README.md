@@ -1,23 +1,29 @@
 # Docker Dev AMP
 Docker complete for developer 
-PHP5.6, PHP 7.0, PHP7.2, PHP7.3, PHP7.4, PHP8.0 and PHP8.1, 
+
+PHP5.6, PHP 7.0, PHP7.2, PHP7.3, PHP7.4, PHP8.0 and PHP8.1
+
 MariaDB 10 And PhpMyAdmin
 
+All xdebug, sendmail, libpng-dev, libzip-dev, zlib1g-dev, mysqli, pdo and gd
+
 ##Composer:
-select version php ex: php8.1 = v8.1.0, php5.6 = v5.6.0
+
 ```bash
-"alexdeovidal/docker-dev": "v8.1.0"
+"alexdeovidal/docker-dev": "v1.0.0"
 ```
 
 ##Terminal
-version php8.1
+
 ```bash
 composer require alexdeovidal/docker-dev
 ```
 ###IMPORTANT: 
 Require Docker install, Windows, Mac or Linux
 
-Access vendor/alexdeovidal/docker-dev and install .docker-compose.yml
+Access vendor/alexdeovidal/docker-dev and install php-[version]-docker-compose.yml
+
+ex: php-81-docker-compose.yml set server PHP81
 
 YES :)
 
