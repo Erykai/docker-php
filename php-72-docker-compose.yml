@@ -1,8 +1,8 @@
 version: "3.9"
 services:
   php:
-    build: src/php
-    container_name: "srv-php"
+    build: src/php/7.2
+    container_name: "srv-php72"
     image: server-apache
     volumes:
       - ../../../:/var/www/html

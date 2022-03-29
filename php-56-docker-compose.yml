@@ -1,0 +1,51 @@
+version: "3.9"
+services:
+  php:
+    build: src/php/5.6
+    container_name: "srv-php56"
+    image: server-apache
+    volumes:
+      - ../../../:/var/www/html
+      - ./personal.ini:/usr/local/etc/php/conf.d/personal.ini
+      - ./src/apache/lvh.me.crt:/etc/ssl/certs/lvh.me.crt
+      - ./src/apache/lvh.me.key:/etc/ssl/private/lvh.me.key
+      - ./src/apache/000-default.conf:/etc/apache2/sites-enabled/000-default.conf
+    ports:
+      - 80:80
+      - 443:443
+    restart: always
+    networks:
+      - bridge
+
+  mysql:
+    image: mariadb:10.8.2
+    container_name: "srv-mariadb"
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root
+    restart: always
+    networks:
+      - bridge
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: "srv-phpmyadmin"
+    ports:
+      - 8080:80
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=mysql
+      - PMA_USER=root
+      - PMA_PASSWORD=root
+    links:
+      - mysql
+    restart: always
+    networks:
+      - bridge
+
+networks:
+  bridge:
+    driver: bridge
