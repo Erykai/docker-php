@@ -1,14 +1,16 @@
 # Docker Dev AMP
-Docker complete for developer PHP 8, MariaDB 10 And PhpMyAdmin
+Docker complete for developer 
+PHP5.6, PHP 7.0, PHP7.2, PHP7.3, PHP7.4, PHP8.0 and PHP8.1, 
+MariaDB 10 And PhpMyAdmin
 
 ##Composer:
-
+select version php
 ```bash
-"alexdeovidal/docker-dev": "1.0.*"
+"alexdeovidal/docker-dev": "php8.0"
 ```
 
 ##Terminal
-
+version php8.1
 ```bash
 composer require alexdeovidal/docker-dev
 ```
