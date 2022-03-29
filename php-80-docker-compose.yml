@@ -3,7 +3,7 @@ services:
   php:
     build: src/php/8.0
     container_name: "srv-php80"
-    image: server-apache
+    image: server-apache-php80
     volumes:
       - ../../../:/var/www/html
       - ./personal.ini:/usr/local/etc/php/conf.d/personal.ini

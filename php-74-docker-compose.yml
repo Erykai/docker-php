@@ -3,7 +3,7 @@ services:
   php:
     build: src/php/7.4
     container_name: "srv-php74"
-    image: server-apache
+    image: server-apache-php74
     volumes:
       - ../../../:/var/www/html
       - ./personal.ini:/usr/local/etc/php/conf.d/personal.ini
