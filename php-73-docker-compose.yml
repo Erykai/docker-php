@@ -21,9 +21,9 @@ services:
     image: mariadb:10.8.2
     container_name: "srv-mariadb"
     volumes:
-      - ../../../src/mariaDB/data:/var/lib/mysql
-      - ../../../src/mariaDB/logs:/var/log/mysql
-      - ../../../src/mariaDB/conf:/etc/mysql
+      - ../../../_db-docker-dev_/data:/var/lib/mysql
+      - ../../../_db-docker-dev_/logs:/var/log/mysql
+      - ../../../_db-docker-dev_/conf:/etc/mysql
     ports:
       - 3306:3306
     environment:
