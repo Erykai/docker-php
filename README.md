@@ -34,5 +34,17 @@ YES :)
 
 ###https://lvh.me PHP
 ###http://lvh.me:8080 PhpMyAdmin
+```bash
+#host = mysql
+#user = root
+#pass = root
+
+#exemple:
+$conn = new PDO(
+    'mysql:host=mysql;dbname=my_table',
+    'root',
+    'root'
+);
+```
 
 Bugs report webav.com.br@gmail.com
