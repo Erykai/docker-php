@@ -1,15 +1,15 @@
 version: "3.9"
 services:
   php:
-    build: src/php/7.0
+    build: .docker/php/7.0
     container_name: "srv-php70"
     image: server-apache-php70
     volumes:
       - ../../../:/var/www/html
       - ./personal.ini:/usr/local/etc/php/conf.d/personal.ini
-      - ./src/apache/lvh.me.crt:/etc/ssl/certs/lvh.me.crt
-      - ./src/apache/lvh.me.key:/etc/ssl/private/lvh.me.key
-      - ./src/apache/000-default.conf:/etc/apache2/sites-enabled/000-default.conf
+      - ./.docker/apache/lvh.me.crt:/etc/ssl/certs/lvh.me.crt
+      - ./.docker/apache/lvh.me.key:/etc/ssl/private/lvh.me.key
+      - ./.docker/apache/000-default.conf:/etc/apache2/sites-enabled/000-default.conf
     ports:
       - 80:80
       - 443:443
