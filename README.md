@@ -23,7 +23,7 @@ Require Docker install, Windows, Mac or Linux
 
 ##Documentation
 
-Access vendor/alexdeovidal/docker-dev and install php-[version]-docker-compose.yml
+Access vendor/alexdeovidal/docker-dev and install [version].yml
 
 [![Video Documentation](https://i.ytimg.com/vi/4vcFGtyl8Xk/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD8BX1_DiQUVBiWq6pAZgRQP0dwMQ)](https://www.youtube.com/watch?v=4vcFGtyl8Xk)
 
