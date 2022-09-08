@@ -1,8 +1,6 @@
 FROM php:7.4-apache
-RUN docker-php-ext-install mysqli
 RUN apt-get update -y && apt-get install -y sendmail libpng-dev libzip-dev zip zlib1g-dev
-RUN docker-php-ext-install zip
-RUN docker-php-ext-install gd
+RUN docker-php-ext-install mysqli pdo pdo_mysql zip gd opcache
 RUN pecl install xdebug && docker-php-ext-enable xdebug
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN apt-get clean; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*

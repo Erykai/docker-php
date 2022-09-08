@@ -1,9 +1,6 @@
 FROM php:7.0-apache
 RUN apt-get update -y && apt-get install -y sendmail libpng-dev libzip-dev zip zlib1g-dev
-RUN docker-php-ext-install mysqli
-RUN docker-php-ext-install pdo pdo_mysql
-RUN docker-php-ext-install zip
-RUN docker-php-ext-install gd
+RUN docker-php-ext-install mysqli pdo pdo_mysql zip gd opcache
 RUN BEFORE_PWD=$(pwd) \
     && mkdir -p /opt/xdebug \
     && cd /opt/xdebug \
