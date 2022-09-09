@@ -44,6 +44,7 @@ services:
       - PMA_HOST=mysql
       - PMA_USER=root
       - PMA_PASSWORD=root
+      - UPLOAD_LIMIT=300M
     links:
       - mysql
     restart: always
