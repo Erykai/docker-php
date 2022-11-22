@@ -16,7 +16,7 @@ All xdebug, sendmail, libpng-dev, libzip-dev, zlib1g-dev, mysqli, pdo, imagick a
 ##Terminal
 
 ```bash
-composer require erykai/docker-dev
+composer require erykai/docker-php
 ```
 ###IMPORTANT: 
 Require Docker install, Windows, Mac or Linux
