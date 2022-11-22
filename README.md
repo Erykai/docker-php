@@ -10,7 +10,7 @@ All xdebug, sendmail, libpng-dev, libzip-dev, zlib1g-dev, mysqli, pdo, imagick a
 ##Composer:
 
 ```bash
-"erykai/docker-dev": "v1.1.0" 
+"erykai/docker-dev": "v1.1.2" 
 ```
 
 ##Terminal
