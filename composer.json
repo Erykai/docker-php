@@ -1,5 +1,5 @@
 {
-  "name": "alexdeovidal/docker-dev",
+  "name": "erykai/docker-php",
   "description": "Docker complete for developer PHP 8, MariaDB 10 And PhpMyAdmin",
   "minimum-stability": "stable",
   "license": "MIT",
