@@ -5,25 +5,25 @@ PHP5.6, PHP 7.0, PHP7.2, PHP7.3, PHP7.4, PHP8.0 and PHP8.1
 
 MariaDB 10 And PhpMyAdmin
 
-All xdebug, sendmail, libpng-dev, libzip-dev, zlib1g-dev, mysqli, pdo and gd
+All xdebug, sendmail, libpng-dev, libzip-dev, zlib1g-dev, mysqli, pdo, imagick and gd
 
 ##Composer:
 
 ```bash
-"alexdeovidal/docker-dev": "v1.1.0" 
+"erykai/docker-php": "v1.1.2" 
 ```
 
 ##Terminal
 
 ```bash
-composer require alexdeovidal/docker-dev
+composer require erykai/docker-php
 ```
 ###IMPORTANT: 
 Require Docker install, Windows, Mac or Linux
 
 ##Documentation
 
-Access vendor/alexdeovidal/docker-dev and install [version].yml
+Access vendor/erykai/docker-php and install [version].yml
 
 [![Video Documentation](https://i.ytimg.com/vi/4vcFGtyl8Xk/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD8BX1_DiQUVBiWq6pAZgRQP0dwMQ)](https://www.youtube.com/watch?v=4vcFGtyl8Xk)
 
