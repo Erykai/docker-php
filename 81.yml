@@ -5,7 +5,7 @@ services:
     container_name: "srv-php81"
     image: server-apache-php81
     volumes:
-      - ./public_html/:/var/www/html
+      - ../../../:/var/www/html
       - ./personal.ini:/usr/local/etc/php/conf.d/personal.ini
       - ./.docker/apache/lvh.me.crt:/etc/ssl/certs/lvh.me.crt
       - ./.docker/apache/lvh.me.key:/etc/ssl/private/lvh.me.key
@@ -22,9 +22,9 @@ services:
     image: mariadb:10.8.2
     container_name: "srv-mariadb"
     volumes:
-      - ./_db-docker-dev_/data:/var/lib/mysql
-      - ./_db-docker-dev_/logs:/var/log/mysql
-      - ./_db-docker-dev_/conf:/etc/mysql
+      - ../../../_db-docker-dev_/data:/var/lib/mysql
+      - ../../../_db-docker-dev_/logs:/var/log/mysql
+      - ../../../_db-docker-dev_/conf:/etc/mysql
     ports:
       - 3306:3306
     environment:
